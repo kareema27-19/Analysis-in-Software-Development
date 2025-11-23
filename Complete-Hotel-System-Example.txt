@@ -1,0 +1,475 @@
+Comprehensive example applying the concepts above — Hotel Management System
+
+Below I’ll deliver a full, practical example that ties together user stories, acceptance criteria, backlog with weighting & prioritization, estimation approach, definition of done/ready, sprint plan, basic data model and APIs, UI/UX notes, test cases, and non-functional requirements — all for a hotel system (online booking + front-desk operations + admin).
+
+1 — Vision / Scope (one-liner)
+
+Enable guests to discover and book rooms, manage reservations, and let hotel staff manage availability, check-ins, payments, and reporting — with secure admin controls and analytics.
+
+2 — High-level epics
+
+Guest booking & account management
+
+Reservations & payments
+
+Front-desk operations (check-in/out, housekeeping)
+
+Room & rate management (inventory)
+
+Admin & reporting
+
+Notifications & communications
+
+Integrations (payment gateway, channel manager)
+
+3 — Key non-functional requirements (NFRs)
+
+Performance: pages < 2s on < 100ms DB latency for common queries.
+
+Scalability: support 5k concurrent visitors, auto-scale services.
+
+Security: PCI-DSS for card capture; TLS; RBAC for staff/admin.
+
+Availability: 99.9% monthly uptime for booking flow.
+
+Auditability: audit trail for reservation/payment changes.
+
+Localization: multi-currency & multi-language support.
+
+4 — Primary user roles
+
+Guest (end user)
+
+Registered user (guest with account)
+
+Front Desk Agent
+
+Housekeeping Staff
+
+Revenue Manager / Hotel Admin
+
+System (payment gateway, email/SMS provider)
+
+5 — User stories (15) — with acceptance criteria + weight/priority/business value
+
+Format: As a role, I want goal, so that benefit. Then Acceptance Criteria (Gherkin-style), Story Points (Fibonacci), Priority (High/Med/Low), Business Value (1–10).
+
+
+✅ Hotel Management System – User Stories (15 Total)
+1. User Account Registration
+
+User Story:
+As a guest, I want to create an online account so that I can manage my reservations easily.
+
+Acceptance Criteria:
+
+Registration requires name, email, phone, and password.
+
+System sends verification email.
+
+Guest can log in only after verification.
+
+2. User Login & Authentication
+
+User Story:
+As a guest, I want to securely log into my account so that I can access my bookings.
+
+Acceptance Criteria:
+
+Login uses email and password.
+
+Invalid credentials show an error.
+
+System supports password reset via email.
+
+3. Profile Management
+
+User Story:
+As a guest, I want to update my personal information so that my account stays accurate.
+
+Acceptance Criteria:
+
+Guest can edit phone, address, and preferences.
+
+System validates phone and email formats.
+
+Changes are saved instantly.
+
+4. Room Search & Filtering
+
+User Story:
+As a guest, I want to search rooms with filters so that I can find one that fits my needs.
+
+Acceptance Criteria:
+
+Search filters: room type, occupancy, price range, date.
+
+System shows available rooms only.
+
+Results update instantly based on filters.
+
+5. Room Reservation
+
+User Story:
+As a guest, I want to book a room so that I can confirm my stay in advance.
+
+Acceptance Criteria:
+
+Guest selects check-in/check-out dates.
+
+System prevents double booking.
+
+Confirmation receipt is emailed.
+
+6. Modify or Cancel Reservation
+
+User Story:
+As a guest, I want to change or cancel my reservation so that I can adjust my plans.
+
+Acceptance Criteria:
+
+Guest can update dates if room is available.
+
+Cancellation follows hotel policy.
+
+Updated confirmation is emailed.
+
+7. Online Payment Processing
+
+User Story:
+As a guest, I want to pay for my reservation online so that my booking is fully confirmed.
+
+Acceptance Criteria:
+
+Supports card and digital wallet payments.
+
+Payment is marked as successful only after gateway confirmation.
+
+Invoice is emailed.
+
+8. Transfer Booking (Switch Rooms)
+
+User Story:
+As a guest, I want to transfer to a different room during my stay so that I can improve my comfort.
+
+Acceptance Criteria:
+
+System checks new room availability.
+
+Updated charges (if any) are calculated.
+
+Staff receives a notification to assist with the transfer.
+
+9. Request Hotel Services (Room Service, Laundry, Transport)
+
+User Story:
+As a guest, I want to request services from the hotel so that my stay is more comfortable.
+
+Acceptance Criteria:
+
+Services list displayed with prices.
+
+Guest can place requests from mobile.
+
+Staff receives service tickets in real time.
+
+10. Loan Hospitality Items (Towels, Iron, Baby Bed)
+
+User Story:
+As a guest, I want to borrow hotel items so that I can use additional items during my stay.
+
+Acceptance Criteria:
+
+Guest selects items from available list.
+
+System logs borrowed items.
+
+Staff receives notification for delivery.
+
+11. Booking History / Statements
+
+User Story:
+As a guest, I want to view my booking and payment history so that I can track my spending.
+
+Acceptance Criteria:
+
+Shows all past bookings with dates and payments.
+
+Statements are downloadable (PDF).
+
+System displays totals clearly.
+
+12. Loyalty Points Management
+
+User Story:
+As a returning guest, I want to earn and redeem loyalty points so that I can receive rewards.
+
+Acceptance Criteria:
+
+Points earned per booking.
+
+Guest can redeem points for discounts.
+
+Points balance visible in the dashboard.
+
+13. Staff Room Assignment Management
+
+User Story:
+As a hotel staff member, I want to assign rooms to incoming guests so that check-ins are smooth.
+
+Acceptance Criteria:
+
+Available rooms listed by type.
+
+System prevents assigning occupied rooms.
+
+Check-in status updated instantly.
+
+14. Housekeeping Task Management
+
+User Story:
+As a housekeeping staff member, I want to receive cleaning tasks so that I know which rooms need service.
+
+Acceptance Criteria:
+
+Rooms marked as “clean”, “dirty”, or “in progress”.
+
+Staff receives task notifications.
+
+Status updates instantly after cleaning.
+
+15. Admin Dashboard & Reports
+
+User Story:
+As an admin, I want to view revenue reports, occupancy rates, and staff performance so that I can make informed decisions.
+
+Acceptance Criteria:
+
+Reports include charts and summaries.
+
+Filter data by date range.
+
+Export as PDF or Excel.
+
+✅ Complete Product Backlog with Weighted User Stories
+| Factor                  | Scale                 | Meaning                                   |
+| ----------------------- | --------------------- | ----------------------------------------- |
+| **Priority (P)**        | 1–5                   | Importance to user/business (5 = highest) |
+| **Business Value (BV)** | 1–10                  | Revenue, efficiency, customer impact      |
+| **Complexity (C)**      | 1–13 (Fibonacci)      | Estimated effort to deliver               |
+| **Overall Weight (OW)** | **OW = (P × BV) / C** | Higher = more important to do early       |
+
+Product Backlog
+
+| P | BV | C | OW       |
+| - | -- | - | -------- |
+| 5 | 10 | 5 | **10.0** |
+
+US2 – Secure Login
+
+| P | BV | C | OW       |
+| - | -- | - | -------- |
+| 5 | 10 | 3 | **16.6** |
+
+
+✅ User Stories with Acceptance Criteria
+1. User Registration
+
+User Story
+As a new user, I want to register an account so that I can access the system’s features.
+
+Acceptance Criteria
+
+Given I am on the registration page, when I enter valid details, then my account should be created.
+
+Password must meet security rules (min length, complexity).
+
+Duplicate email addresses are not allowed.
+
+A confirmation email should be sent after successful registration.
+
+2. User Login
+
+User Story
+As a registered user, I want to log into my account so that I can access my dashboard.
+
+Acceptance Criteria
+
+Login succeeds only with valid email and password.
+
+System must lock the account after 5 failed attempts.
+
+Successful login redirects to dashboard.
+
+System shows error messages for invalid credentials.
+
+3. View Profile
+
+User Story
+As a user, I want to view my profile so that I can see my personal information.
+
+Acceptance Criteria
+
+Profile page must display complete user details.
+
+Only authenticated users can access the profile.
+
+Incorrect or missing data should trigger an error message.
+
+4. Update Profile
+
+User Story
+As a user, I want to update my profile so that I can keep my information accurate.
+
+Acceptance Criteria
+
+Users can update personal info (name, phone, etc.).
+
+Email and phone number must be validated.
+
+System must save changes and show a success message.
+
+Updated data must reflect immediately.
+
+5. Change Password
+
+User Story
+As a user, I want to change my password so that I can secure my account.
+
+Acceptance Criteria
+
+User must enter current password to proceed.
+
+New password must meet security standards.
+
+System confirms password change via on-screen notification.
+
+6. Reset Forgotten Password
+
+User Story
+As a user, I want to reset my forgotten password so that I can regain access.
+
+Acceptance Criteria
+
+System sends a reset link to registered email.
+
+Reset link must expire after a defined time.
+
+Password must be successfully updated using the link.
+
+7. Search Feature
+
+User Story
+As a user, I want to search items so that I can quickly find what I need.
+
+Acceptance Criteria
+
+Search returns results that match entered keywords.
+
+No results should show a “Not Found” message.
+
+Search must complete under 2 seconds.
+
+8. View Item Details
+
+User Story
+As a user, I want to view item details so that I can understand its features.
+
+Acceptance Criteria
+
+Details must include name, description, price, and status.
+
+Page loads without errors.
+
+Unauthorized users cannot view restricted data.
+
+9. Add Item to Cart / Request List
+
+User Story
+As a user, I want to add an item to my list/cart so that I can save it for later.
+
+Acceptance Criteria
+
+User can add items with one click.
+
+System confirms item was added.
+
+Duplicate items are avoided or handled properly.
+
+10. Remove Item from Cart / List
+
+User Story
+As a user, I want to remove items from my list so that I can manage my selections.
+
+Acceptance Criteria
+
+Removal must update the list immediately.
+
+System asks for confirmation before deletion.
+
+Success message appears after deletion.
+
+11. Admin – View All Users
+
+User Story
+As an admin, I want to view all users so that I can manage system access.
+
+Acceptance Criteria
+
+List must include basic details (name, email, status).
+
+Admin can filter or search users.
+
+Only admin roles can access this page.
+
+12. Admin – Deactivate User
+
+User Story
+As an admin, I want to deactivate users so that I can control system security.
+
+Acceptance Criteria
+
+Deactivated users cannot log in.
+
+System logs the action with timestamp.
+
+Admin receives a success message.
+
+13. Notifications
+
+User Story
+As a user, I want to receive notifications so that I stay updated.
+
+Acceptance Criteria
+
+User receives notifications for important events.
+
+Notifications appear in the system and/or via email.
+
+Users can mark notifications as read.
+
+14. Generate Reports
+
+User Story
+As an admin, I want to generate reports so that I can analyze system usage.
+
+Acceptance Criteria
+
+Reports generate in PDF/Excel formats.
+
+Filters must allow date range, user type, etc.
+
+Report must download successfully.
+
+15. System Security Logs
+
+User Story
+As an admin, I want to view system logs so that I can track activities.
+
+Acceptance Criteria
+
+Logs must include timestamp, action, and user.
+
+Logs must be searchable and filterable.
+
+System must prevent unauthorized access.
