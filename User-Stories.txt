@@ -1,0 +1,84 @@
+3--User Stories 
+
+Define user stories and their format (As a… I want… So that…) 
+
+What Are User Stories? 
+
+User stories are short, simple descriptions of a feature written from the perspective of the end user or customer. 
+They are used in Agile (especially Scrum) to capture what the user needs, why they need it, and what value it provides. 
+
+Explain how to write effective user stories 
+
+1. Follow the Standard Format 
+
+Always use the classic template: 
+
+As a [user role], I want [goal] so that [benefit]. 
+
+Ensures clarity about who, what, and why. 
+
+Keeps the story user-centered and value-driven. 
+
+Example: 
+As a bank customer, I want to schedule automatic bill payments so that I never miss a due date 
+
+2. Make Them Small and Manageable 
+
+Each story should represent a single feature or functionality. 
+
+Avoid combining multiple features into one story; these are called epics and should be broken down. 
+
+Tip: A story should be deliverable within one sprint (usually 1–4 weeks). 
+
+3. Focus on User Value 
+
+Always emphasize the benefit or outcome for the user. 
+
+Avoid technical jargon or focusing on internal implementation. 
+
+Weak Example: 
+I want to use a database to store user info. 
+Better Example: 
+As an admin, I want to store user info securely so that I can manage accounts safely. 
+
+4. Keep It Clear and Concise 
+
+Use simple language everyone can understand. 
+
+Avoid vague terms like “improve,” “optimize,” or “enhance” without context. 
+
+5. Make Stories Testable (Acceptance Criteria) 
+
+Include acceptance criteria to define when the story is done. 
+
+Helps QA and developers know exactly what to implement and test. 
+
+Example Acceptance Criteria for the bill payment story: 
+
+User can schedule recurring payments. 
+
+System sends a confirmation email. 
+
+User can edit or cancel a scheduled payment. 
+
+6. Collaborate with Stakeholders 
+
+Write stories with input from users, product owners, and developers. 
+
+Ensure the story reflects real needs and is feasible technically. 
+
+Acceptance Criteria are specific conditions or requirements that a product, feature, or user story must meet to be considered complete and acceptable by the stakeholders, including the client, product owner, or end-users. They serve as a formal agreement between the development team and stakeholders on what “done” means for a particular feature or functionality. 
+
+Importance of Acceptance Criteria: 
+
+Clear Definition of Done: They provide a shared understanding between the development team and stakeholders about when a feature is complete. 
+
+Facilitates Testing: QA teams can use acceptance criteria to create test cases and verify functionality. 
+
+Reduces Misunderstandings: Minimizes ambiguity about what the feature is supposed to do. 
+
+Guides Development: Helps developers focus on implementing only what is needed. 
+
+Supports Prioritization: Helps product owners determine whether a feature meets business requirements and can be released. 
+
+Improves Customer Satisfaction: Ensures delivered features meet the expectations and needs of end-users. 
