@@ -1,0 +1,346 @@
+Step 1: Define User Stories
+
+| ID  | User Story                                                                                         |
+| --- | -------------------------------------------------------------------------------------------------- |
+| US1 | As a customer, I want to view my account balance so that I can monitor my funds.                   |
+| US2 | As a customer, I want to transfer money to another account so that I can pay bills.                |
+| US3 | As a customer, I want to receive SMS notifications for transactions so that I can track activity.  |
+| US4 | As a bank manager, I want to generate monthly financial reports so that I can analyze performance. |
+| US5 | As a customer, I want to set up recurring payments so that I can automate bills.                   |
+| US6 | As a customer, I want to apply for a new credit card online so that I can get faster approval.     |
+
+Step 2: Assign Complexity
+
+| User Story | Complexity (1–8)                        |
+| ---------- | --------------------------------------- |
+| US1        | 2 (simple display)                      |
+| US2        | 5 (requires validation, transfer logic) |
+| US3        | 3 (notification integration)            |
+| US4        | 8 (complex reporting logic)             |
+| US5        | 5 (recurring schedule, validation)      |
+| US6        | 8 (integration with credit system)      |
+
+
+Step 4: Assign Business Value
+
+| User Story | Business Value (1–10)                  |
+| ---------- | -------------------------------------- |
+| US1        | 10 (critical for usability)            |
+| US2        | 9 (critical for banking operations)    |
+| US3        | 6 (increases trust/security)           |
+| US4        | 7 (supports decision-making)           |
+| US5        | 5 (convenience feature)                |
+| US6        | 8 (supports growth of credit services) |
+
+Step 5: Calculate Weighted Score
+
+| User Story | Calculation  | Weighted Score |
+| ---------- | ------------ | -------------- |
+| US1        | (10 × 5) / 2 | 25             |
+| US2        | (9 × 5) / 5  | 9              |
+| US3        | (6 × 3) / 3  | 6              |
+| US4        | (7 × 4) / 8  | 3.5            |
+| US5        | (5 × 3) / 5  | 3              |
+| US6        | (8 × 4) / 8  | 4              |
+
+Step 6: Rank User Stories
+| Rank | User Story                 | Weighted Score |
+| ---- | -------------------------- | -------------- |
+| 1    | US1: View Account Balance  | 25             |
+| 2    | US2: Transfer Money        | 9              |
+| 3    | US3: SMS Notifications     | 6              |
+| 4    | US6: Apply for Credit Card | 4              |
+| 5    | US4: Monthly Reports       | 3.5            |
+| 6    | US5: Recurring Payments    | 3              |
+
+
+Include at least 10-15 user stories for various banking features (e.g., account management,   
+transfers, loans, statements)
+
+Comprehensive Banking System Backlog
+
+| #    | User Story (US)                                                                                                | Acceptance Criteria                                                                                           | Story Points | Business Value | Priority |
+| ---- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------ | -------------- | -------- |
+| US1  | As a customer, I want to **view my account balance** so that I can track my money.                             | Display current & available balance; updates after transactions; secure login required.                       | 2            | 5              | High     |
+| US2  | As a customer, I want to **transfer money between my own accounts** so that I can manage my funds.             | Internal transfers with confirmation; balance updates; error handling for insufficient funds.                 | 3            | 5              | High     |
+| US3  | As a customer, I want to **transfer money to other accounts (internal/external)** so that I can pay bills.     | Validate recipient account; real-time transfer; confirmation screen; error handling.                          | 5            | 5              | High     |
+| US4  | As a customer, I want to **receive transaction notifications** so that I am aware of account activity.         | SMS/email notifications; notifications for deposits, withdrawals, transfers; option to customize preferences. | 5            | 4              | Medium   |
+| US5  | As a customer, I want to **download my account statements** so that I can maintain personal records.           | Generate PDF; monthly/quarterly selection; include transaction history & balance summary.                     | 5            | 4              | Medium   |
+| US6  | As a bank admin, I want to **generate monthly reports for all accounts** so that I can track bank performance. | Reports include account balances, transactions summary, loan status; exportable CSV/PDF.                      | 8            | 3              | Low      |
+| US7  | As a customer, I want to **apply for a personal loan online** so that I can get financial support quickly.     | Online form with required fields; eligibility check; approval/rejection notification.                         | 8            | 5              | High     |
+| US8  | As a customer, I want to **view my loan status and repayment schedule** so that I can plan payments.           | Display remaining balance, due dates, past payments; alert for overdue payments.                              | 5            | 4              | Medium   |
+| US9  | As a customer, I want to **set up recurring payments** so that my bills are paid automatically.                | Allow amount, frequency, and start/end dates; notify before payment; editable/cancelable.                     | 5            | 4              | Medium   |
+| US10 | As a customer, I want to **update my personal information** so that my account records are accurate.           | Edit name, address, contact; verify changes via OTP/email; audit log maintained.                              | 3            | 4              | Medium   |
+| US11 | As a customer, I want to **close my bank account** so that I can manage my finances elsewhere.                 | Confirmation before closure; verify zero balance; final statement generation; account deactivation.           | 5            | 3              | Low      |
+| US12 | As a customer, I want to **block/unblock my debit/credit card** so that I can secure my account.               | Immediate block/unblock; confirmation sent via SMS/email; prevent transactions while blocked.                 | 5            | 5              | High     |
+| US13 | As a customer, I want to **set transaction limits** so that I can control spending and security.               | Set daily/monthly limits; alert when approaching limit; editable by user.                                     | 3            | 4              | Medium   |
+| US14 | As a customer, I want to **search transaction history** so that I can track specific payments.                 | Search by date, type, amount; filter and sort options; export results.                                        | 3            | 4              | Medium   |
+| US15 | As a customer, I want to **link external bank accounts** so that I can manage multiple accounts in one place.  | Secure authentication; view balances; initiate transfers; audit log.                                          | 8            | 4              | Medium   |
+
+Banking System Product Backlog
+| ID    | User Story                                                                                                     | Priority | Complexity (1–5) | Business Value (1–5) | Weighted Score |
+| ----- | -------------------------------------------------------------------------------------------------------------- | -------- | ---------------- | -------------------- | -------------- |
+| US-01 | As a user, I want to create a new bank account so that I can start using banking services.                     | High     | 3                | 5                    | 45             |
+| US-02 | As a user, I want to log in securely using my credentials so that my account is protected.                     | High     | 2                | 5                    | 30             |
+| US-03 | As a user, I want to view my account balance so that I can track my money.                                     | High     | 1                | 5                    | 15             |
+| US-04 | As a user, I want to transfer money to another account so that I can pay bills or friends.                     | High     | 3                | 5                    | 45             |
+| US-05 | As a user, I want to view my transaction history so that I can monitor my expenses.                            | Medium   | 2                | 4                    | 16             |
+| US-06 | As a user, I want to schedule future transfers so that payments are automated.                                 | Medium   | 3                | 4                    | 24             |
+| US-07 | As a user, I want to apply for a loan online so that I don’t need to visit the branch.                         | Medium   | 4                | 5                    | 40             |
+| US-08 | As a user, I want to check loan eligibility so that I can plan my finances.                                    | Medium   | 2                | 4                    | 16             |
+| US-09 | As a user, I want to receive notifications for transactions so that I am aware of account activity.            | High     | 2                | 4                    | 24             |
+| US-10 | As an admin, I want to approve or reject account applications so that only verified users can access services. | High     | 3                | 5                    | 45             |
+| US-11 | As an admin, I want to generate monthly statements for users so that financial records are maintained.         | Medium   | 3                | 4                    | 24             |
+| US-12 | As a user, I want to update my personal information so that my account remains accurate.                       | Medium   | 2                | 3                    | 12             |
+| US-13 | As a user, I want to change my password so that my account security is maintained.                             | High     | 1                | 5                    | 15             |
+| US-14 | As a user, I want to block my debit/credit card in case of loss so that my money is safe.                      | High     | 2                | 5                    | 30             |
+| US-15 | As an admin, I want to generate reports on loan approvals so that I can analyze bank performance.              | Low      | 3                | 3                    | 9              |
+
+Product Backlog for Banking System
+1. User Story: Account Registration
+
+As a new user
+
+I want to create a bank account online
+
+So that I can access banking services digitally
+
+Acceptance Criteria:
+
+User can enter personal details (name, email, phone).
+
+System validates required fields and email format.
+
+User receives confirmation email after successful registration.
+
+System generates a unique account number.
+
+2. User Story: User Login
+
+As a registered user
+
+I want to log in securely
+
+So that I can access my account information
+
+Acceptance Criteria:
+
+User can log in using username/email and password.
+
+System validates credentials before granting access.
+
+Account is locked after 5 failed login attempts.
+
+User can reset password via a secure link.
+
+3. User Story: View Account Balance
+
+As a user
+
+I want to see my current account balance
+
+So that I can know my available funds
+
+Acceptance Criteria:
+
+Account balance displays in real-time.
+
+Balance reflects all completed transactions.
+
+User can view balances for multiple accounts (if applicable).
+
+4. User Story: Fund Transfer
+
+As a user
+
+I want to transfer money to another account
+
+So that I can pay or send funds digitally
+
+Acceptance Criteria:
+
+User can input recipient details and amount.
+
+System validates sufficient funds before transfer.
+
+Transaction is confirmed with a reference number.
+
+Recipient account is updated instantly or per processing rules.
+
+5. User Story: Transaction History
+
+As a user
+
+I want to view my past transactions
+
+So that I can track my spending
+
+Acceptance Criteria:
+
+User can filter transactions by date, type, or amount.
+
+Transaction details include date, type, amount, and recipient/sender.
+
+System shows transactions in reverse chronological order.
+
+6. User Story: Deposit Funds
+
+As a user
+
+I want to deposit money into my account
+
+So that I can increase my account balance
+
+Acceptance Criteria:
+
+User can deposit via online transfer, cheque, or in-branch.
+
+Deposit updates the account balance immediately after processing.
+
+User receives confirmation of deposit.
+
+7. User Story: Apply for Loan
+
+As a user
+
+I want to apply for a loan online
+
+So that I can get funds for personal or business needs
+
+Acceptance Criteria:
+
+User can select loan type and enter amount.
+
+System validates eligibility based on account details and credit score.
+
+Application status is tracked and displayed.
+
+User receives email notification of approval or rejection.
+
+8. User Story: Bill Payments
+
+As a user
+
+I want to pay utility bills through the system
+
+So that I can manage payments conveniently
+
+Acceptance Criteria:
+
+User can select the biller and enter payment details.
+
+Payment is processed securely and reflected immediately.
+
+User receives confirmation receipt.
+
+9. User Story: ATM Locator
+
+As a user
+
+I want to locate nearby ATMs
+
+So that I can withdraw cash easily
+
+Acceptance Criteria:
+
+System displays ATMs on a map based on user location.
+
+ATM information includes address and operational hours.
+
+User can get directions to selected ATM.
+
+10. User Story: Update Personal Information
+
+As a user
+
+I want to update my personal details
+
+So that my account information is accurate
+
+Acceptance Criteria:
+
+User can update email, phone number, or address.
+
+System validates updated fields for correctness.
+
+User receives confirmation of changes.
+
+11. User Story: Secure Logout
+
+As a user
+
+I want to log out securely
+
+So that my account is protected when not in use
+
+Acceptance Criteria:
+
+User can log out from any device.
+
+Session ends immediately after logout.
+
+System prompts for login if accessing restricted pages after logout.
+
+12. User Story: Alerts & Notifications
+
+As a user
+
+I want to receive alerts for account activity
+
+So that I can monitor for unauthorized transactions
+
+Acceptance Criteria:
+
+User receives notifications for deposits, withdrawals, or failed transactions.
+
+Notifications can be sent via email, SMS, or app push.
+
+Users can configure alert preferences.
+
+13. User Story: Two-Factor Authentication (2FA)
+
+As a user
+
+I want an additional security layer
+
+So that my account is more secure
+
+Acceptance Criteria:
+
+User is prompted for a one-time code during login.
+
+Code is sent via SMS or authenticator app.
+
+System validates the code before granting access.
+
+14. User Story: Generate Account Statements
+
+As a user
+
+I want to download monthly account statements
+
+So that I can keep a record of my finances
+
+Acceptance Criteria:
+
+User can select a date range.
+
+System generates a downloadable PDF statement.
+
+Statement includes all transactions, balances, and bank details.
+
+15. User Story: Customer Support Chat
+
+As a user
+
+I want to chat with customer support online
+
+So that I can resolve banking issues quickly
+
+Acceptance Criteria:
+
+User can initiate chat from the app or website.
+
+Chat responses are timely and logged for reference.
+
+Users can escalate issues to a human agent if needed.
