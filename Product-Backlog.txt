@@ -1,0 +1,113 @@
+2--Product Backlog Development 
+
+Explain what a product backlog is and its purpose 
+
+What is a Product Backlog? 
+
+A Product Backlog is a prioritized list of all the work that needs to be done in an Agile project. 
+It contains everything the product may require, including: 
+
+Features 
+
+Enhancements 
+
+Bug fixes 
+
+Technical tasks 
+
+Research items 
+
+The backlog is owned and managed by the Product Owner. 
+
+Each item in the backlog is called a Product Backlog Item (PBI) or User Story. 
+
+Purpose of the Product Backlog 
+
+The Product Backlog serves several important purposes: 
+
+1. Acts as the Single Source of Work 
+
+It gathers all requirements in one place, ensuring the team knows exactly what needs to be built. 
+
+ 
+
+2. Provides Prioritized Work 
+
+Items are arranged by importance: 
+
+High-value features appear at the top 
+
+Less urgent items appear lower 
+
+This helps the development team know what to focus on next. 
+
+3. Supports Planning (Especially Sprint Planning) 
+
+During Sprint Planning, the team selects the top backlog items to work on next. 
+Without the backlog, planning would be impossible. 
+
+4. Ensures Transparency 
+
+All stakeholders (client, team, managers) can see: 
+
+What is planned 
+
+What is being worked on 
+
+What remains 
+
+This creates clarity and trust. 
+
+ 
+
+5. Allows Continuous Adaptation 
+
+The backlog is not fixed—it is updated regularly when: 
+
+New requirements appear 
+
+Priorities change 
+
+Old items become irrelevant 
+
+This supports Agile’s principle of embracing change. 
+
+6. Helps the Team Deliver Maximum Value 
+
+By focusing on the most important features first, the team ensures the product delivers value early and continuously. 
+
+#Discuss backlog prioritization techniques 
+
+1. MoSCoW Method 
+
+2. Kano Model 
+
+3. Value vs. Effort (or Value vs. Complexity) Matrix 
+
+4. WSJF (Weighted Shortest Job First) – From SAFe 
+
+5. RICE Scoring 
+
+6. Eisenhower Matrix (Urgent–Important) 
+
+7. Story Mapping 
+
+8. Dot Voting (Democratic Prioritization) 
+
+ 
+
+#Explain backlog refinement and maintenance 
+
+What is Backlog Refinement? 
+
+Backlog Refinement (also called Backlog Grooming) is the ongoing process of reviewing, updating, and improving Product Backlog Items (PBIs) so that they are ready for future sprints. 
+
+It is usually performed regularly, often once per sprint. 
+
+What is Backlog Maintenance? 
+
+Backlog Maintenance refers to the continuous effort of keeping the entire backlog healthy, updated, and aligned with product goals. 
+
+If refinement is about improving items, maintenance is about keeping the whole backlog system under control. 
+
+ 
