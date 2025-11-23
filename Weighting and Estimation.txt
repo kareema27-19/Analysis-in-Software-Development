@@ -1,0 +1,232 @@
+4--Weighting and Estimation 
+
+Explain story point estimation techniques 
+
+Story point estimation is a technique used in Agile and Scrum to estimate the relative effort, complexity, and risk of implementing a user story or feature. Unlike time-based estimation, story points are abstract units that allow teams to compare tasks without committing to exact hours. 
+
+1. Planning Poker (Scrum Poker) 
+
+2. T-Shirt Sizing 
+
+3. Bucket System 
+
+4. Affinity Estimation 
+
+5. Dot Voting 
+
+6. Three-Point Estimation (PERT-inspired) 
+
+#Describe methods like Planning Poker, T-shirt sizing, etc. 
+
+1. Planning Poker 
+
+Method: 
+
+Each team member is given a deck of cards with values (e.g., Fibonacci sequence: 1, 2, 3, 5, 8, 13…). 
+
+The Product Owner describes a user story. 
+
+Each team member privately selects a card representing their estimate of effort. 
+
+Everyone reveals their card simultaneously. 
+
+Differences are discussed, especially if someone chose an extreme value. 
+
+Repeat until consensus or near-consensus is reached. 
+
+Pros: 
+
+Encourages discussion and knowledge sharing. 
+
+Reduces anchoring and bias because estimates are revealed simultaneously. 
+
+Cons: 
+
+Can take time for large backlogs. 
+
+ 
+
+2. T-shirt Sizing 
+
+Method: 
+
+Instead of numerical values, stories are sized like T-shirts: XS, S, M, L, XL. 
+
+The team discusses each story and assigns a size relative to other stories. 
+
+Later, these sizes can be mapped to story points if needed. 
+
+Pros: 
+
+Simple and intuitive for beginners. 
+
+Works well for high-level estimations. 
+
+Cons: 
+
+Less precise than numerical methods. 
+
+ 
+
+3. Dot Voting / Affinity Estimation 
+
+Method: 
+
+Stories are placed on a wall or board. 
+
+Team members place dots or stickers to indicate the size or priority of each story. 
+
+Affinity estimation involves grouping stories into similar sizes (small, medium, large) quickly, then refining relative sizes. 
+
+Pros: 
+
+Fast and visual. 
+
+Good for large sets of stories. 
+
+Cons: 
+
+Can be less rigorous; depends on team’s experience. 
+
+ 
+
+4. Bucket System 
+
+Method: 
+
+Stories are placed into “buckets” representing story points (e.g., 1, 2, 3, 5, 8…). 
+
+The team quickly decides which bucket each story belongs to, sometimes using rounds for adjustments. 
+
+Pros: 
+
+Efficient for estimating many stories. 
+
+Maintains relative sizing. 
+
+Cons: 
+
+Needs team familiarity with story points. 
+
+ 
+
+5. Three-Point Estimation (PERT) 
+
+Method: 
+
+Each story is given three estimates: 
+
+Optimistic (O) – best-case scenario 
+
+Most Likely (M) – most realistic scenario 
+
+Pessimistic (P) – worst-case scenario 
+
+Formula for expected estimate: 
+
+Estimate=O+4M+P6\text{Estimate} = \frac{O + 4M + P}{6}Estimate=6O+4M+P   
+
+Pros: 
+
+Incorporates uncertainty. 
+
+Provides more accurate, weighted estimates. 
+
+Cons: 
+
+Slightly more complex; needs understanding of probability. 
+
+ 
+
+#Discuss how to weight user stories by complexity, priority, and business value 
+
+1. Weighting by Complexity (Effort or Difficulty) 
+
+Complexity estimates how much work a story will require. It helps the team understand effort, risk, and resource allocation. 
+
+Common methods: 
+
+Story Points: A relative measure of effort, usually using a Fibonacci sequence (1, 2, 3, 5, 8, 13…). 
+
+Small tasks = low points. 
+
+Large, complex tasks = high points. 
+
+T-shirt sizing: Small, Medium, Large, XL. 
+
+Planning Poker: Team members independently estimate effort, then discuss discrepancies. 
+
+Why it matters: 
+Stories with high complexity might take longer, need specialized skills, or introduce more risk. Weighting by complexity ensures realistic sprint planning. 
+
+ 
+
+2. Weighting by Priority 
+
+Priority reflects urgency or importance to the customer or business. 
+
+How to determine priority: 
+
+MoSCoW method: Must have, Should have, Could have, Won’t have. 
+
+Stakeholder input: Product Owner consults clients, business analysts, and key users. 
+
+Dependency mapping: Some features may need to be implemented before others. 
+
+Why it matters: 
+High-priority stories should generally be scheduled before lower-priority ones, even if they are less complex, to maximize immediate value or meet deadlines. 
+
+ 
+
+3. Weighting by Business Value 
+
+Business value measures the impact of a story on the product or organization. 
+
+Techniques: 
+
+Value points: Assign numeric values (e.g., 1–10) based on potential revenue, customer satisfaction, or market impact. 
+
+Kano model: Classifies features as Must-have, Performance, or Delighters. 
+
+Cost of Delay (CoD): Quantifies potential loss if a story is delayed. 
+
+Why it matters: 
+High-value stories give the greatest return on investment. A story with moderate complexity but high business value may be prioritized over a low-value, low-complexity story. 
+
+ 
+
+4. Combining the Three Factors 
+
+Many teams use a weighted scoring model to balance complexity, priority, and value: 
+
+Example formula: 
+
+Weighted Score=Business Value×PriorityComplexity\text{Weighted Score} = \frac{\text{Business Value} \times \text{Priority}}{\text{Complexity}}Weighted Score=ComplexityBusiness Value×Priority   
+
+High business value + high priority → higher score. 
+
+High complexity → reduces the score slightly (if desired to avoid bottlenecks). 
+
+Allows objective comparison across stories. 
+
+Steps: 
+
+Assign each story a value for complexity, priority, and business value. 
+
+Normalize scales (e.g., 1–5 for each factor). 
+
+Calculate the weighted score. 
+
+Rank stories by score for backlog refinement and sprint planning. 
+
+ 
+
+5. Practical Tips 
+
+Always involve the team in estimates for better accuracy. 
+
+Reassess weights regularly; priorities and business value can change. 
+
+Consider risk and dependencies along with weighted scores. 
+
+Use visual tools like weighted scoring matrices to simplify decisions. 
