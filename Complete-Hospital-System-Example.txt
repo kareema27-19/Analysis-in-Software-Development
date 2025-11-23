@@ -1,0 +1,480 @@
+✅ Hospital Management System – Comprehensive Example
+
+This example includes:
+
+✔ User stories
+
+✔ Acceptance criteria
+
+✔ Priority
+
+✔ Complexity (story points)
+
+✔ Business value
+
+✔ Backlog refinement
+
+✔ Sprint planning example
+
+1. Scope of the Hospital System
+
+The system should support:
+
+Patient registration & records
+
+Appointment scheduling
+
+Electronic medical records (EMR)
+
+Doctor & staff management
+
+Billing & payments
+
+Pharmacy management
+
+Alerts & notifications
+
+Secure login & 2FA
+
+Lab test management
+
+2. Product Backlog (User Stories + Acceptance Criteria + Weights)
+
+| #      | User Story                                                                                                             | Acceptance Criteria                                                                                                                       | Priority | Complexity (SP) | Business Value |
+| ------ | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------- | -------------- |
+| **1**  | **Patient Registration**: As a patient, I want to register so I can access hospital services.                          | 1. Enter personal & contact info <br> 2. Mandatory field validation <br> 3. Unique Patient ID generated <br> 4. Confirmation message sent | High     | 3               | 10             |
+| **2**  | **Secure Login**: As a user, I want to log in securely so patient data is protected.                                   | 1. Email + password login <br> 2. 2FA support <br> 3. Lock after failed attempts                                                          | High     | 3               | 10             |
+| **3**  | **Book Appointment**: As a patient, I want to book an appointment so I can visit a doctor.                             | 1. Select doctor, date, and department <br> 2. Prevent double-booking <br> 3. Receive confirmation                                        | High     | 5               | 10             |
+| **4**  | **Doctor Schedule Management**: As a doctor, I want to manage my schedule so I can update availability.                | 1. Set available hours <br> 2. Sync with appointments <br> 3. Notify patients if schedule changes                                         | High     | 5               | 9              |
+| **5**  | **Electronic Medical Record (EMR)**: As a doctor, I want patient medical history so I can diagnose correctly.          | 1. View previous visits, prescriptions, lab results <br> 2. Update records after consultation <br> 3. Access permissions required         | High     | 8               | 10             |
+| **6**  | **Billing & Payments**: As a patient, I want to pay my hospital bills online so it is convenient.                      | 1. Auto-generated bill summary <br> 2. Integrate payment gateway <br> 3. Email receipt                                                    | High     | 5               | 9              |
+| **7**  | **Prescription Creation**: As a doctor, I want to write digital prescriptions so patients receive accurate medication. | 1. Choose medicines from pharmacy database <br> 2. Auto-calculate dosage <br> 3. Send to pharmacy system                                  | Medium   | 4               | 8              |
+| **8**  | **Pharmacy Inventory**: As a pharmacist, I want to manage drug stock so the inventory is accurate.                     | 1. Add/update medication stock <br> 2. Track expiry dates <br> 3. Low-stock alerts                                                        | Medium   | 4               | 7              |
+| **9**  | **Lab Test Request**: As a doctor, I want to request lab tests so diagnosis is accurate.                               | 1. Select test type <br> 2. Send request to lab team <br> 3. Update EMR with results                                                      | Medium   | 5               | 9              |
+| **10** | **Generate Medical Reports**: As a patient, I want to download my medical reports.                                     | 1. PDF report generation <br> 2. Date range filter <br> 3. Must include diagnosis + test results                                          | Medium   | 3               | 8              |
+| **11** | **Notifications**: As a user, I want alerts for appointments, test results, and reminders.                             | 1. Email/SMS/app notifications <br> 2. Customizable notification settings                                                                 | Medium   | 3               | 7              |
+| **12** | **Emergency Alerts**: As a staff member, I want to trigger emergency codes (Code Blue, Code Red).                      | 1. One-click emergency trigger <br> 2. Notify relevant teams instantly <br> 3. Event logged                                               | High     | 4               | 9              |
+| **13** | **Room & Bed Management**: As an admin, I want to manage rooms so patients can be assigned correctly.                  | 1. Track available & occupied rooms <br> 2. Assign room to patient <br> 3. Notification when discharged                                   | Low      | 4               | 6              |
+| **14** | **Staff Management**: As admin, I want to manage staff roles and permissions.                                          | 1. Add/remove staff <br> 2. Set roles (Doctor/Nurse/Receptionist) <br> 3. Control access levels                                           | Medium   | 4               | 8              |
+| **15** | **Feedback System**: As a patient, I want to submit feedback about hospital services.                                  | 1. Rating + comment form <br> 2. Store feedback securely <br> 3. Admin can view reports                                                   | Low      | 2               | 5              |
+
+3. Prioritization Summary
+High Priority (Core Hospital Operations)
+
+Registration
+
+Login + Security
+
+Appointment booking
+
+Doctor schedule
+
+EMR
+
+Billing
+
+Emergency alerts
+
+Medium Priority (Supportive Features)
+
+Pharmacy
+
+Lab tests
+
+Reports
+
+Notifications
+
+Staff management
+
+Low Priority (Enhancements)
+
+Room/bed management
+
+Feedback system
+
+4. Backlog Refinement
+
+During refinement, the team:
+
+Identifies dependencies:
+
+EMR depends on patient registration
+
+Appointments depend on doctor schedule
+
+Lab tests depend on EMR
+
+Pharmacy depends on prescriptions
+
+Splits large stories:
+
+EMR split into:
+
+View history
+
+Update records
+
+Upload lab results
+
+Removes ambiguity:
+
+Clear description added to emergency alerts
+
+Billing story refined to include insurance support
+
+5. Sprint Planning Example
+Sprint Goal:
+
+Enable basic patient flow: registration → login → appointment booking → doctor schedule.
+
+Sprint Duration:
+
+2 weeks
+Stories selected for Sprint 1:
+
+| Story                      | Story Points |
+| -------------------------- | ------------ |
+| Patient Registration       | 3            |
+| Secure Login               | 3            |
+| Appointment Booking        | 5            |
+| Doctor Schedule Management | 5            |
+| Notifications (basic)      | 3            |
+
+
+✅ Hospital Management System – 15 User Stories with Acceptance Criteria
+1. Patient Registration & Account Creation
+
+User Story:
+As a new patient, I want to create an online hospital account so that I can access hospital services digitally.
+
+Acceptance Criteria:
+
+Patient can enter personal details, contact info, and ID number.
+
+System validates duplicate accounts.
+
+Confirmation email/SMS is sent after successful account creation.
+
+2. Patient Login & Authentication
+
+User Story:
+As a patient, I want to log in securely so that I can access my medical records and appointments.
+
+Acceptance Criteria:
+
+Login requires email/phone + password.
+
+Two-factor authentication (OTP) must be supported.
+
+Incorrect attempts lock the account after 5 tries.
+
+3. Book a Medical Appointment
+
+User Story:
+As a patient, I want to book an appointment with a doctor so that I can receive treatment on my preferred date.
+
+Acceptance Criteria:
+
+Patient selects doctor, date, and time.
+
+System checks doctor availability.
+
+Booking confirmation is displayed and sent via SMS/email.
+
+4. Reschedule or Cancel Appointment
+
+User Story:
+As a patient, I want to reschedule or cancel my appointment so that I can adjust plans if needed.
+
+Acceptance Criteria:
+
+Patient can change date/time if slots are available.
+
+Cancellation is allowed up to 24 hours before appointment.
+
+Doctor receives automatic updates.
+
+5. Patient Admission Request
+
+User Story:
+As a doctor, I want to create admission requests for patients so that hospital staff can prepare rooms and resources.
+
+Acceptance Criteria:
+
+Doctor selects patient, reason, room type.
+
+System checks room availability.
+
+Admission request is sent to the admissions desk.
+
+6. Room/Bed Allocation
+
+User Story:
+As an admission officer, I want to allocate beds to patients so that the hospital maintains proper occupancy records.
+
+Acceptance Criteria:
+
+System displays available rooms and beds.
+
+Bed changes and transfers must be recorded.
+
+Occupancy updates reflect instantly.
+
+7. Patient Medical Record (EMR) Access
+
+User Story:
+As a doctor, I want to view a patient’s medical history so that I can make informed decisions.
+
+Acceptance Criteria:
+
+EMR includes diagnoses, medications, allergies, lab results.
+
+Only authorized staff can access records.
+
+Audit logs track who accessed the file.
+
+8. Add Doctor’s Diagnosis & Treatment Plan
+
+User Story:
+As a doctor, I want to update patient medical records with diagnosis and treatment plans so that the care team stays informed.
+
+Acceptance Criteria:
+
+Templates for diagnosis and prescriptions.
+
+Updates require doctor authentication.
+
+Nurses and pharmacists can view updates.
+
+9. Lab Test Order
+
+User Story:
+As a doctor, I want to order lab tests for patients so that necessary analyses can be performed.
+
+Acceptance Criteria:
+
+Test list includes blood tests, X-ray, MRI, etc.
+
+Lab receives the order instantly.
+
+Status updates: Ordered → In Progress → Completed.
+
+10. Lab Test Results Upload & Notification
+
+User Story:
+As a lab technician, I want to upload lab results so that doctors and patients can view them.
+
+Acceptance Criteria:
+
+PDF or electronic result entry supported.
+
+Automatic notification to doctor and patient.
+
+Results stored in EMR.
+
+11. Prescription & Pharmacy Integration
+
+User Story:
+As a pharmacist, I want to view prescriptions issued by doctors so that I can dispense the correct medication.
+
+Acceptance Criteria:
+
+Only valid prescriptions appear.
+
+Drug inventory updates after dispensing.
+
+Substitute medication requires doctor approval.
+
+12. Patient Billing & Invoice Generation
+
+User Story:
+As billing staff, I want to generate patient invoices so that payments can be processed accurately.
+
+Acceptance Criteria:
+
+Invoice includes consultation fees, tests, medication, room charges.
+
+Taxes and insurance coverage applied automatically.
+
+System supports printing and digital download.
+
+13. Insurance Claim Submission
+
+User Story:
+As a patient, I want to submit insurance details so that I can reduce my medical expenses.
+
+Acceptance Criteria:
+
+System validates insurance provider and policy number.
+
+Automatically calculates coverage percentage.
+
+Claim status: Submitted → Under Review → Approved/Rejected.
+
+14. Staff Management
+
+User Story:
+As an administrator, I want to manage staff accounts so that only authorized personnel can access the system.
+
+Acceptance Criteria:
+
+Add, remove, or update staff roles.
+
+Access permissions vary by role (doctor, nurse, admin).
+
+Activity logs track all actions.
+
+15. Hospital Performance Dashboard
+
+User Story:
+As a hospital manager, I want a dashboard so that I can monitor hospital performance metrics.
+
+Acceptance Criteria:
+
+Metrics: patient count, admission rate, bed occupancy, revenue.
+
+Data updates in real time.
+
+Export options: PDF, Excel.
+
+✅ Complete Product Backlog with Weighted User Stories
+System Example: Hospital Management System
+🔷 How Weighting Works
+
+Each story is evaluated on three dimensions:
+
+1. Complexity (C)
+
+Effort & technical difficulty — scale 1 to 5
+(1 = very easy, 5 = very difficult)
+
+2. Priority (P)
+
+Urgency based on delivery order — scale 1 to 5
+(1 = lowest, 5 = immediate)
+
+3. Business Value (BV)
+
+Impact on business goals — scale 1 to 5
+
+⭐ Weighted Score Formula
+Weighted
+ 
+Score
+=
+(
+𝐶
+×
+0.4
+)
++
+(
+𝑃
+×
+0.3
+)
++
+(
+𝐵
+𝑉
+×
+0.3
+)
+Weighted Score=(C×0.4)+(P×0.3)+(BV×0.3)
+🎯 Story Points
+
+Based on Fibonacci scale: 1, 2, 3, 5, 8, 13, 21
+
+🏥 PRODUCT BACKLOG
+Epic 1: Patient Management
+
+US-1: Patient Registration
+
+| C | P | BV | Weighted Score | Story Points | MoSCoW    |
+| - | - | -- | -------------- | ------------ | --------- |
+| 2 | 5 | 5  | **3.4**        | 5            | Must Have |
+
+US-2: Update Patient Profile
+
+| C | P | BV | Score   | Points | Priority  |
+| - | - | -- | ------- | ------ | --------- |
+| 1 | 4 | 4  | **2.5** | 2      | Must Have |
+
+✅ User Stories with Acceptance Criteria
+1. User Registration
+
+User Story:
+As a new user, I want to create an account, so that I can access personalized features.
+
+Acceptance Criteria:
+
+User must provide required fields: name, email, password.
+
+Email format must be validated.
+
+Password must meet the security rules (e.g., 8+ chars).
+
+User receives confirmation that the account was created.
+
+System must prevent duplicate accounts by using the same email.
+
+2. User Login
+
+User Story:
+As a registered user, I want to log into my account, so that I can access all services.
+
+Acceptance Criteria:
+
+User can log in using email and password.
+
+Incorrect credentials show a clear error message.
+
+System must lock the account after 5 failed attempts.
+
+Successful login redirects user to the dashboard.
+
+3. Reset Password
+
+User Story:
+As a user, I want to reset my password, so that I can regain access if I forget it.
+
+Acceptance Criteria:
+
+User can request password reset via email.
+
+A reset link must be sent within 1 minute.
+
+Reset link must expire in 15 minutes.
+
+User can set a new password and receive a confirmation.
+
+4. View Dashboard
+
+User Story:
+As a logged-in user, I want to view my dashboard, so I can see relevant information at a glance.
+
+Acceptance Criteria:
+
+Dashboard loads within 3 seconds.
+
+Shows personalized data (name, profile photo, status).
+
+Shows recent activity or notifications.
+
+Dashboard elements adjust based on user role.
+
+5. Update Profile
+
+User Story:
+As a user, I want to update my profile information, so that my account stays accurate.
+
+Acceptance Criteria:
+
+User can edit name, phone, address, and profile image.
+
+Required fields must be validated.
+
+Changes must reflect immediately after saving.
+
+A success or failure message must appear.
